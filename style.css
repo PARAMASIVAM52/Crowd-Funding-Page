@@ -1,0 +1,451 @@
+@import url("https://fonts.google.com/specimen/Commissioner");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  background-color: #efeded;
+}
+
+.main-screen {
+  position: relative;
+  height: 100vh;
+}
+
+.header_block {
+  height: 200px;
+  background-image: url("../src/image-hero-desktop.jpg");
+  padding: 25px 60px;
+}
+.header_block .head_link {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700/2;
+  margin-right: 6%;
+}
+.header_block .head_link nav a {
+  text-decoration: none;
+  margin: 5px 20px;
+  color: #fff;
+  font-weight: 700/2;
+}
+.header_block .head_link nav .Discover:hover {
+  cursor: pointer;
+}
+
+.main-block {
+  width: 45%;
+  margin-left: 28%;
+  border-radius: 8px;
+  margin-top: -6%;
+  margin-bottom: 35px;
+}
+.main-block img {
+  margin-left: 45%;
+  margin-bottom: -3.5%;
+}
+.main-block .content-block {
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  padding-bottom: 20px;
+}
+.main-block .content-block h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 6px 3px;
+}
+.main-block .content-block p {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(0, 0%, 48%);
+  margin-bottom: 25px;
+}
+.main-block .content-block .button_set {
+  display: flex;
+  justify-content: space-between;
+}
+.main-block .content-block .button_set button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: rgb(101, 168, 116);
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+}
+.main-block .content-block .button_set button:hover {
+  cursor: pointer;
+}
+.main-block .content-block .button_set .toggle-bookmark {
+  background-color: #d6d5d5;
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-block .content-block .button_set .toggle-bookmark img {
+  margin-left: 0px;
+}
+.main-block .content-block .button_set .toggle-bookmark p {
+  margin-top: 10%;
+  margin-right: 10%;
+  font-size: 12px;
+}
+.main-block .content-block .button_set .toggle-bookmark:hover {
+  cursor: pointer;
+}
+.main-block .content-block .button_set .toggle-bookmarked {
+  background-color: #d6d5d5;
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+.main-block .content-block .button_set .toggle-bookmarked img {
+  margin-left: 0px;
+  color: rgb(101, 168, 116);
+}
+.main-block .content-block .button_set .toggle-bookmarked p {
+  margin-top: 10%;
+  margin-right: 5%;
+  font-size: 12px;
+  color: rgb(101, 168, 116);
+}
+.main-block .content-block .button_set .toggle-bookmarker:hover {
+  cursor: pointer;
+}
+
+.count-block {
+  background-color: white;
+  margin: 20px 0px;
+  padding: 30px;
+  border-radius: 5px;
+}
+.count-block .count {
+  display: grid;
+  grid-template-columns: repeat(3, 33.25%);
+  grid-template-rows: repeat(1, auto);
+  gap: 0.5px;
+}
+.count-block .count .numbers_data {
+  padding: 15px;
+  background-color: #fff;
+}
+.count-block .count .numbers_data:nth-child(2), .count-block .count .numbers_data:nth-child(3) {
+  border-left: solid grey 1px;
+  height: 30px;
+  margin-top: 5px;
+}
+.count-block .count .numbers_data h2 {
+  display: flex;
+  justify-content: center;
+}
+.count-block .count .numbers_data p {
+  font-size: 12px;
+  color: hsl(0, 0%, 48%);
+  display: flex;
+  justify-content: center;
+  margin-left: 6%;
+}
+.count-block .level {
+  background-color: #fff;
+  height: auto;
+  margin-top: 10px;
+  padding: 5px;
+}
+.count-block .level .level-full {
+  height: 10px;
+  background-color: rgba(214, 205, 205, 0.727);
+  border-radius: 10px;
+}
+.count-block .level .level-full .level-value {
+  height: 10px;
+  background-color: rgb(101, 168, 116);
+  border-radius: 10px;
+  width: 82%;
+}
+
+.main-content {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+.main-content .About {
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.main-content .About h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.main-content .About p {
+  margin: 10px;
+  line-height: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+}
+.main-content .main-ddb {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 15px;
+  padding-top: 10px;
+}
+.main-content .main-ddb .main-db {
+  border-radius: 6px;
+  border: solid rgba(0, 0, 0, 0.3529411765) 0.5px;
+  padding: 20px 15px;
+  background-color: rgba(255, 255, 255, 0.9058823529);
+}
+.main-content .main-ddb .main-db p {
+  margin: 10px;
+  line-height: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+}
+.main-content .main-ddb .main-db span:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content .main-ddb .main-db span:nth-child(1) h2 {
+  font-size: 18px;
+}
+.main-content .main-ddb .main-db span:nth-child(1) p {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bolder;
+  color: rgb(101, 168, 116);
+}
+.main-content .main-ddb .main-db span:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content .main-ddb .main-db span:nth-child(3) .left {
+  display: flex;
+  align-items: center;
+}
+.main-content .main-ddb .main-db span:nth-child(3) .left p {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.main-content .main-ddb .main-db span:nth-child(3) button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: rgb(101, 168, 116);
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+}
+.main-content .main-ddb .main-dbb3 {
+  box-shadow: left #655d5d;
+  opacity: 0.6;
+}
+.main-content .main-ddb .main-dbb3 span:nth-child(3) button {
+  background-color: #655d5d;
+}
+
+.project-screen {
+  background-color: rgba(0, 0, 0, 0.488);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: center center;
+  display: none;
+  padding: 15% 32%;
+}
+.project-screen .project-block-main {
+  background-color: #ffffff;
+  height: auto;
+  width: 35%;
+  z-index: 2;
+  border-radius: 6px;
+  padding: 20px;
+}
+.project-screen .project-block-main img {
+  margin-left: 98%;
+}
+.project-screen .project-block-main h2 {
+  margin: 5px;
+  font-size: 20px;
+}
+.project-screen .project-block-main p {
+  margin: 10px;
+  line-height: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  line-height: normal;
+  font-size: 16px;
+  margin-left: 0px;
+}
+.project-screen .project-block-main .project-data {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(4, auto);
+  gap: 20px;
+}
+.project-screen .project-block-main .project-data .project-block {
+  background-color: rgba(255, 255, 255, 0.9058823529);
+  padding: 10px;
+  padding-bottom: 0px;
+  border-radius: 6px;
+  border: solid #807979 1px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: solid #c1b9b9 1px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 input {
+  margin-top: 20px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 input[type=radio]:checked {
+  background-color: rgb(101, 168, 116);
+  border-color: rgb(101, 168, 116);
+  font-weight: bold;
+  cursor: pointer;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label {
+  margin-left: 15px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label span {
+  display: flex;
+  justify-content: space-between;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label span .head1, .project-screen .project-block-main .project-data .project-block .project-block-1 label span .head2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label span .head1 p {
+  margin: 10px;
+  line-height: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  color: rgb(101, 168, 116);
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-left: 5px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label span .head2 p {
+  margin-bottom: 6px;
+  margin-left: 5px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label span h2 {
+  font-size: 18px;
+  margin: 5px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-1 label span h2:hover {
+  color: rgb(101, 168, 116);
+  cursor: pointer;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-2 {
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  display: none;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-2 .p-bb2-2 button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: rgb(101, 168, 116);
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-2 .p-bb2-2 button:nth-child(1) {
+  background-color: #fff;
+  border: solid #655d5d 1px;
+  color: #655d5d;
+  width: 80px;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-2 .p-bb2-2 button:nth-child(1) b {
+  color: #000;
+}
+.project-screen .project-block-main .project-data .project-block .project-block-2 .p-bb2-2 button:hover {
+  cursor: pointer;
+}
+.project-screen .project-block-main .project-data .project-b4 {
+  box-shadow: left #655d5d;
+  opacity: 0.6;
+}
+.project-screen .project-block-main .project-data .project-b4 span:nth-child(3) button {
+  background-color: #655d5d;
+}
+.project-screen .project-block-main .project-block:hover {
+  border: solid rgb(101, 168, 116) 3px;
+}
+
+.thanks-screen {
+  background-color: rgba(0, 0, 0, 0.488);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: center center;
+  display: none;
+  padding: 15% 32%;
+}
+.thanks-screen .thank-block {
+  background-color: #ffffff;
+  height: auto;
+  width: 35%;
+  z-index: 2;
+  border-radius: 6px;
+  padding: 20px;
+}
+.thanks-screen .thank-block img {
+  margin: 3% 45%;
+}
+.thanks-screen .thank-block h2 {
+  margin: 2% 25%;
+}
+.thanks-screen .thank-block p {
+  margin: 10px;
+  line-height: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 48%);
+  margin: 2% 5%;
+}
+.thanks-screen .thank-block button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  background-color: rgb(101, 168, 116);
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+  margin: 2% 40%;
+}
+.thanks-screen .thank-block button:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

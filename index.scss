@@ -1,0 +1,446 @@
+@use "sass:math";
+@import url('https://fonts.google.com/specimen/Commissioner');
+
+
+$primary-Green-400: hsl(176, 50%, 47%);
+$primary-Green-700: hsl(176, 72%, 28%);
+$Neutral-Black: hsl(0, 0%, 0%);
+$Neutral-Gray-500: hsl(0, 0%, 48%);
+$Font-size: 16px;
+$font-Family: 'Commissioner',sans-serif;
+$new-font:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$Font-Weights-1: 400;
+$Font-Weights-2: 500;
+$Font-Weights-3: 700;
+$text-green:rgb(101, 168, 116);
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+}
+@mixin overlay-block{
+    background-color: #ffffff;
+        height: auto;
+        width: 35%;
+        z-index: 2;
+        // position: fixed;
+        border-radius: 6px;
+        padding: 20px;
+}
+@mixin overlay{
+    background-color: rgba(0, 0, 0, 0.488);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: center center;
+    display: none;
+    padding: 15% 32%;
+}
+@mixin box-shadow{
+     box-shadow: left #655d5d;
+            opacity: 0.6;
+            span{
+                &:nth-child(3){
+                    button{
+                        background-color: #655d5d;
+                }
+            }
+            }
+}
+@mixin button{
+    padding: 15px 20px;
+    border-radius: 25px;
+    background-color: rgb(101, 168, 116);
+    font-weight: 600;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+}
+@mixin p-text{
+    margin: 10px;
+    line-height: 22px;
+    font-family: $new-font;
+    font-weight: 500;
+    color: $Neutral-Gray-500;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: $font-Family;
+    background-color: #efeded;
+}
+.main-screen{
+    position: relative;
+    height: 100vh;
+}
+.header_block{
+    height: 200px;
+    background-image: url('../src/image-hero-desktop.jpg');
+    padding: 25px 60px;
+    .head_link{
+        display: flex;
+        justify-content: space-between;
+        font-weight: calc($Font-Weights-3)/2;
+        margin-right: 6%;
+        nav{
+            a{
+            text-decoration: none;
+            margin: 5px 20px;
+            color: #fff;
+            font-weight: calc($Font-Weights-3)/2;
+            }
+            .Discover:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.main-block{
+    width: 45%;
+    margin-left: 28%;
+    border-radius: 8px;
+    margin-top: -6%;
+    margin-bottom: 35px;
+    img{
+        margin-left: 45%;
+        margin-bottom: -3.5%;
+    }
+    .content-block{
+        background-color: white;
+        border-radius: 5px;
+        padding: 30px;
+        padding-bottom: 20px;
+        h2{
+            @include center();
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 6px 3px;
+        }
+        p{
+            @include center();
+            font-size: 14px;
+            font-weight:   600;
+            color: $Neutral-Gray-500;
+            margin-bottom: 25px;
+        }
+        .button_set{
+            display: flex;
+            justify-content: space-between;
+            button{
+                @include button();
+            }
+            button:hover{
+                cursor: pointer;
+            }
+            .toggle-bookmark{
+                background-color: #d6d5d5;
+                height: 40px;
+                width: 120px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: space-between;
+                img{
+                    margin-left: 0px;
+                }
+                p{
+                    margin-top: 10%;
+                    margin-right: 10%;
+                    font-size: 12px;
+                }
+            }
+            .toggle-bookmark:hover{
+                cursor: pointer;
+            }
+            .toggle-bookmarked{
+                background-color: #d6d5d5;
+                height: 40px;
+                width: 120px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: space-between;
+                display: none;
+                img{
+                    margin-left: 0px;
+                    color: $text-green;
+                }
+                p{
+                    margin-top: 10%;
+                    margin-right: 5%;
+                    font-size: 12px;
+                    color:$text-green;
+                }
+            }
+            .toggle-bookmarker:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.count-block{
+    background-color: white;
+    margin: 20px 0px;
+    padding: 30px;
+    border-radius: 5px;
+    .count{
+        display: grid;
+        grid-template-columns: repeat(3,33.25%);
+        grid-template-rows: repeat(1,auto);
+        gap: 0.5px;
+        .numbers_data{
+            padding: 15px;
+            background-color: #fff;
+            &:nth-child(2), &:nth-child(3){
+            border-left: solid grey 1px;
+            height: 30px;
+            margin-top: 5px;
+            }
+            h2{
+                @include center();
+            }
+            p{
+            font-size: 12px;
+            color: $Neutral-Gray-500;
+            @include center();
+            margin-left: 6%;
+
+            }
+        } 
+    }
+    .level{
+        background-color: #fff;
+        height: auto;
+        margin-top: 10px;
+        padding: 5px;
+        .level-full{
+            height: 10px;
+            background-color: rgba(214, 205, 205, 0.727);
+            border-radius: 10px;
+            .level-value{
+                height: 10px;
+                background-color: rgb(101, 168, 116);
+                border-radius: 10px;
+                width: 82%;
+            }
+
+        }
+
+    }
+}
+
+.main-content{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    .About{
+        padding: 5px;
+        margin-bottom: 15px;
+        h2{
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        p{
+           @include p-text();
+        }
+    }
+    .main-ddb{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(3,auto);
+        gap: 15px;
+        padding-top: 10px;
+        .main-db{
+            border-radius: 6px;
+            border:solid #0000005a 0.5px;
+            padding: 20px 15px;
+            background-color: #ffffffe7;
+            p{
+                @include p-text();
+            }
+            span{
+                &:nth-child(1){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h2{
+                        font-size: 18px;
+                    }
+                    p{
+                        @include center();
+                        font-size: 13px;
+                        font-weight: bolder;
+                        color: $text-green;
+                    }
+                }
+                &:nth-child(3){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .left{
+                        display: flex;
+                        align-items: center;
+                        p{
+                            font-size: 14px;
+                            margin-left: 5px;
+                        }
+                    }
+                    button{
+                        @include button();
+    
+                    }
+
+                }
+            }
+        }
+        .main-dbb3{
+            @include box-shadow();
+        }
+    }
+}
+
+.project-screen{
+    @include overlay();
+    .project-block-main{
+        @include overlay-block();
+        img{
+            margin-left: 98%;
+        }
+        h2{
+            margin: 5px;
+            font-size: 20px;
+        }
+        p{
+            @include p-text();
+            line-height: normal;
+            font-size: 16px;
+            margin-left: 0px;
+        }
+        .project-data{
+            display: grid;
+            grid-template-columns: repeat(1,100%);
+            grid-template-rows: repeat(4,auto);
+            gap: 20px;
+            .project-block{
+                background-color: #ffffffe7;
+                padding: 10px;
+                padding-bottom: 0px;
+                border-radius: 6px;
+                border: solid #807979  1px;
+                
+                .project-block-1{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items:flex-start;
+                    border-bottom: solid #c1b9b9  1px;
+                    input{
+                        margin-top: 20px;
+                    }
+                    input[type="radio"]:checked{
+                        background-color: $text-green; 
+                        border-color: $text-green;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                    label{
+                        margin-left: 15px;
+                        span{ 
+                            display: flex;
+                            justify-content: space-between;
+                            .head1,.head2{
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: space-between;
+                            }
+                            .head1{
+                                p{
+                                    @include p-text();
+                                    color: $text-green;
+                                    font-weight: 600;
+                                    margin-bottom: 6px;
+                                    margin-left: 5px;
+                                }
+                            }
+                            .head2{
+                                p{
+                                    margin-bottom: 6px;
+                                    margin-left: 5px;
+                                }
+                            }
+                            h2{
+                                font-size: 18px;
+                                margin: 5px;
+                            }
+                            h2:hover{
+                                color: $text-green;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .project-block-2{
+                    padding: 15px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    display: none;
+                    .p-bb2-2{
+                        button{
+                            @include button();
+                            &:nth-child(1){
+                                background-color: #fff;
+                                border: solid #655d5d 1px;
+                                color:#655d5d;
+                                width: 80px;
+                                b{
+                                   color: #000; 
+                                }
+                            }
+                        }
+                        button:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .project-b4{
+                @include box-shadow();
+            }
+            
+        }
+        .project-block:hover{
+            border: solid $text-green 3px;
+        }
+    }
+}
+.thanks-screen{
+    @include overlay();
+    // display: block;
+    .thank-block{
+        @include overlay-block();
+        img{
+            margin: 3% 45%;
+        }
+        h2{
+            margin: 2% 25%;
+        }
+        p{
+            @include p-text();
+            margin: 2% 5%;
+        }
+        button{
+            @include button();
+            margin: 2% 40%;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    }
+}
