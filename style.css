@@ -16,7 +16,7 @@ body {
 
 .header_block {
   height: 200px;
-  background-image: url("../src/image-hero-desktop.jpg");
+  background-image: url("image-hero-desktop.jpg");
   padding: 25px 60px;
 }
 .header_block .head_link {
